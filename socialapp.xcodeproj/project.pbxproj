@@ -9,7 +9,12 @@
 /* Begin PBXBuildFile section */
 		08CBA2280B221275CF4D9499 /* Pods_socialapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B879FEA5A91323C562EC296 /* Pods_socialapp.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		F90D6CA51E82A5A60051832D /* UserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F90D6CA41E82A5A60051832D /* UserVC.swift */; };
-		F9CBA3671E83F87D00FE738E /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = F9CBA3661E83F87D00FE738E /* GoogleService-Info (1).plist */; };
+		F9C162111E8D422F00BDD7DB /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C162101E8D422F00BDD7DB /* CircleImage.swift */; };
+		F9C162131E8D433000BDD7DB /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C162121E8D433000BDD7DB /* RoundedView.swift */; };
+		F9C162151E8D44D100BDD7DB /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C162141E8D44D100BDD7DB /* FeedVC.swift */; };
+		F9C162171E8D458200BDD7DB /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C162161E8D458200BDD7DB /* Posts.swift */; };
+		F9C162191E8E525A00BDD7DB /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C162181E8E525A00BDD7DB /* PostCell.swift */; };
+		F9CBA3671E83F87D00FE738E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F9CBA3661E83F87D00FE738E /* GoogleService-Info.plist */; };
 		F9FCB0F81E816EFD00A8E8DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB0F71E816EFD00A8E8DE /* AppDelegate.swift */; };
 		F9FCB0FA1E816EFD00A8E8DE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9FCB0F91E816EFD00A8E8DE /* ViewController.swift */; };
 		F9FCB0FD1E816EFD00A8E8DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9FCB0FB1E816EFD00A8E8DE /* Main.storyboard */; };
@@ -21,7 +26,12 @@
 		8BF588DF02663353DDE71EAE /* Pods-socialapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-socialapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-socialapp/Pods-socialapp.debug.xcconfig"; sourceTree = "<group>"; };
 		9B879FEA5A91323C562EC296 /* Pods_socialapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_socialapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F90D6CA41E82A5A60051832D /* UserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserVC.swift; sourceTree = "<group>"; };
-		F9CBA3661E83F87D00FE738E /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		F9C162101E8D422F00BDD7DB /* CircleImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		F9C162121E8D433000BDD7DB /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		F9C162141E8D44D100BDD7DB /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		F9C162161E8D458200BDD7DB /* Posts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		F9C162181E8E525A00BDD7DB /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		F9CBA3661E83F87D00FE738E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F9FCB0F41E816EFD00A8E8DE /* socialapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = socialapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9FCB0F71E816EFD00A8E8DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9FCB0F91E816EFD00A8E8DE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +69,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F950AAFF1E8D3F8D00979F99 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				F9C162101E8D422F00BDD7DB /* CircleImage.swift */,
+				F9C162121E8D433000BDD7DB /* RoundedView.swift */,
+				F9C162181E8E525A00BDD7DB /* PostCell.swift */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
 		F9FCB0EB1E816EFD00A8E8DE = {
 			isa = PBXGroup;
 			children = (
@@ -80,13 +100,16 @@
 		F9FCB0F61E816EFD00A8E8DE /* socialapp */ = {
 			isa = PBXGroup;
 			children = (
+				F950AAFF1E8D3F8D00979F99 /* view */,
 				F9FCB0F71E816EFD00A8E8DE /* AppDelegate.swift */,
 				F9FCB0F91E816EFD00A8E8DE /* ViewController.swift */,
 				F90D6CA41E82A5A60051832D /* UserVC.swift */,
 				F9FCB0FB1E816EFD00A8E8DE /* Main.storyboard */,
 				F9FCB0FE1E816EFD00A8E8DE /* Assets.xcassets */,
 				F9FCB1031E816EFD00A8E8DE /* Info.plist */,
-				F9CBA3661E83F87D00FE738E /* GoogleService-Info (1).plist */,
+				F9CBA3661E83F87D00FE738E /* GoogleService-Info.plist */,
+				F9C162141E8D44D100BDD7DB /* FeedVC.swift */,
+				F9C162161E8D458200BDD7DB /* Posts.swift */,
 			);
 			path = socialapp;
 			sourceTree = "<group>";
@@ -156,7 +179,7 @@
 			files = (
 				F9FCB0FF1E816EFD00A8E8DE /* Assets.xcassets in Resources */,
 				F9FCB0FD1E816EFD00A8E8DE /* Main.storyboard in Resources */,
-				F9CBA3671E83F87D00FE738E /* GoogleService-Info (1).plist in Resources */,
+				F9CBA3671E83F87D00FE738E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C162151E8D44D100BDD7DB /* FeedVC.swift in Sources */,
+				F9C162171E8D458200BDD7DB /* Posts.swift in Sources */,
 				F9FCB0FA1E816EFD00A8E8DE /* ViewController.swift in Sources */,
+				F9C162111E8D422F00BDD7DB /* CircleImage.swift in Sources */,
 				F90D6CA51E82A5A60051832D /* UserVC.swift in Sources */,
+				F9C162131E8D433000BDD7DB /* RoundedView.swift in Sources */,
 				F9FCB0F81E816EFD00A8E8DE /* AppDelegate.swift in Sources */,
+				F9C162191E8E525A00BDD7DB /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

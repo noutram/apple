@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -25,9 +25,17 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
 
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: "uid"){
+            goToFeedVC()
+        }
+    }
     func goToCreatUserVC(){
         
         performSegue(withIdentifier: "SignUp", sender: nil)
+    }
+    func goToFeedVC() {
+        performSegue(withIdentifier: "ToFeed", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "SignUp" {
@@ -53,7 +61,7 @@ class ViewController: UIViewController {
                     if error == nil {
                         if let user = user {
                             self.userUid = user.uid
-                            self.goToCreatUserVC()
+                            self.goToFeedVC()
                         }
                         
                     } else{
