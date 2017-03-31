@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 class Post {
     private var _username: String!
-    private var _userImg: String
+    private var _userImg: String!
     private var _postImg: String!
     private var _likes: Int!
     private var _postKey: String!
