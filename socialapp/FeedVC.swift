@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
 
 class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
@@ -29,6 +30,19 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         imagePicker.delegate = self
         
     
+        FIRDatabase.database().reference().child("posts").observe(.value, with: {(snapshot)in
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for data in snapshot {
+                    if let postDict = data.value as? Dictionary<String, AnyObject> {
+                        let key = data.key
+                        let post = Post(postKey: key, postData: postDict)
+                        self.posts.append(post)
+                    }
+                }
+            }
+            self.tableView.reloadData()
+        })
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -40,7 +54,13 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath)->
         UITableViewCell {
-        return PostCell()
+            let post = posts[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")as?
+                PostCell{
+                cell.configCell(post: post)
+                return cell
+            }else{
+                return PostCell()
+            }
     }
-    
 }

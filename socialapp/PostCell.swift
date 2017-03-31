@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseDatabase
+
 class PostCell: UITableViewCell {
     
     @IBOutlet weak var userImg: UIImageView!
