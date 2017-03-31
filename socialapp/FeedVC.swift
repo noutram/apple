@@ -33,6 +33,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         FIRDatabase.database().reference().child("posts").observe(.value, with: {(snapshot)in
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
                 for data in snapshot {
+                    print(data)
                     if let postDict = data.value as? Dictionary<String, AnyObject> {
                         let key = data.key
                         let post = Post(postKey: key, postData: postDict)

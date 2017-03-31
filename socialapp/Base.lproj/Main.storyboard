@@ -232,7 +232,7 @@
                                 <rect key="frame" x="0.0" y="61" width="375" height="606"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="271" id="YgV-z7-Brc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="271" id="YgV-z7-Brc" customClass="PostCell" customModule="socialapp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="271"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YgV-z7-Brc" id="yac-Hq-mOS">
@@ -311,6 +311,12 @@
                                                 <constraint firstItem="fzC-av-8A3" firstAttribute="top" secondItem="yac-Hq-mOS" secondAttribute="top" id="zeZ-i9-lGH"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likesLbl" destination="JeD-cj-eq4" id="FjF-rj-guH"/>
+                                            <outlet property="postImg" destination="Yn2-4P-rZl" id="pom-dd-DQY"/>
+                                            <outlet property="userImg" destination="xhP-Ew-flK" id="htN-WU-Nwn"/>
+                                            <outlet property="username" destination="iUC-bp-aj4" id="XIm-DI-9pe"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -326,6 +332,9 @@
                             <constraint firstItem="cIe-fB-haZ" firstAttribute="top" secondItem="pm0-Zv-4eW" secondAttribute="bottom" id="z0y-1T-hn3"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="pm0-Zv-4eW" id="j1O-n9-eld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SmS-dM-9SG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

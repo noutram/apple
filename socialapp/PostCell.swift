@@ -36,7 +36,7 @@ class PostCell: UITableViewCell {
     func configCell(post:Post,img:UIImage? = nil, userImg:UIImage? = nil ){
         self.post = post
         self.likesLbl.text = "\(post.likes)"
-        self.username.text = post.username
+        //self.username.text = post.username
         
         if img != nil {
             self.postImg.image = img
